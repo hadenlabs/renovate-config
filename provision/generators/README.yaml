@@ -36,7 +36,7 @@ badges:
 
 # Short description of this project
 description: |-
-  A [shareable config preset for Renovate](https://docs.renovatebot.com/config-presets/) used in [Hadenlabs](https://hadenlabs.com/).
+  A [shareable config preset for Renovate](https://docs.renovatebot.com/config-presets/) used in [Hadenlabs](https://hadenlabs.com).
 
 usage: |-
 
