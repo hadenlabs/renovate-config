@@ -1,0 +1,53 @@
+---
+#
+# This is the canonical configuration for the `README.md`
+# Run `make readme` to rebuild the `README.md`
+#
+
+# Name of this project
+name: renovate-config
+
+email:
+  support: support@hadenlabs.com
+
+# Logo for this project
+#logo: docs/logo.png
+
+# License of this project
+license: 'LGPL-3.0'
+
+# Canonical GitHub repo
+github_repo: hadenlabs/renovate-config
+
+# Badges to display
+badges:
+  - name: GitHub tag (latest SemVer)
+    image: https://img.shields.io/github/v/tag/hadenlabs/renovate-config.svg?label=latest&sort=semver
+    url: https://github.com/hadenlabs/renovate-config/releases
+  - name: Lint
+    image: https://github.com/hadenlabs/renovate-config/actions/workflows/lint.yml/badge.svg?branch=develop
+    url: https://github.com/hadenlabs/renovate-config/actions
+  - name: Issues
+    image: https://img.shields.io/github/issues/hadenlabs/renovate-config.svg
+    url: https://github.com/hadenlabs/renovate-config/issues
+  - name: Latest Release
+    image: https://img.shields.io/github/release/hadenlabs/renovate-config.svg
+    url: https://github.com/hadenlabs/renovate-config/releases
+
+# Short description of this project
+description: |-
+  A [shareable config preset for Renovate](https://docs.renovatebot.com/config-presets/) used in [Hadenlabs](https://hadenlabs.com/).
+
+
+usage: |-
+
+  ```json
+  {
+    "extends": [
+      "github>hadenlabs/renovate-config"
+    ]
+  }
+  ```
+
+include:
+  - 'docs/presets.md'
