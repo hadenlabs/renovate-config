@@ -7,13 +7,17 @@
   "extends": [
     "config:base",
     ":dependencyDashboard",
-    ":prConcurrentLimit10",
     ":separateMultipleMajorReleases",
     ":timezone(America/Lima)",
-    "github>hadenlabs/renovate-config:schedule"
+    "github>hadenlabs/renovate-config:go",
+    "github>hadenlabs/renovate-config:schedule",
+    "github>hadenlabs/renovate-config:automergePin",
+    "github>hadenlabs/renovate-config:automergeTypesMinor",
+    "github>hadenlabs/renovate-config:groupJest",
+    "github>hadenlabs/renovate-config:groupLinters"
   ],
   "ignorePresets": [":prConcurrentLimit20"],
-  "labels": ["renovate"],
+  "labels": ["dependencies"],
   "postUpdateOptions": ["yarnDedupeHighest", "gomodTidy"],
   "dockerfile": {
     "fileMatch": ["(^|/)Dockerfile-[^/]*$"]
@@ -36,7 +40,7 @@
     },
     {
       "matchPackageNames": ["husky"],
-      "allowedVersions": "<6"
+      "allowedVersions": "<=6"
     }
   ]
 }

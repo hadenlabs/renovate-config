@@ -1,0 +1,22 @@
+{
+  "extends": ["config:base"],
+  "gomodTidy": true,
+  "ignoreDeps": [
+    "golang.org/x/crypto",
+    "golang.org/x/net",
+    "golang.org/x/sys",
+    "golang.org/x/tools"
+  ],
+  "commitMessagePrefix": "ci(deps):",
+  "prBodyNotes": ["{{#if isMajor}}:warning: MAJOR MAJOR MAJOR :warning:{{/if}}"],
+  "reviewers": ["team:developer-toolkit"],
+  "labels": ["dependencies"],
+  "prConcurrentLimit": 4,
+  "postUpdateOptions": ["gomodTidy"],
+  "docker": {
+    "enabled": false
+  },
+  "docker-compose": {
+    "enabled": false
+  }
+}
