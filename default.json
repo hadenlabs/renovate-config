@@ -1,0 +1,42 @@
+{
+  "force": {
+    "constraints": {
+      "node": "< 15.0.0"
+    }
+  },
+  "extends": [
+    "config:base",
+    ":dependencyDashboard",
+    ":prConcurrentLimit10",
+    ":separateMultipleMajorReleases",
+    ":timezone(America/Lima)",
+    "github>hadenlabs/renovate-config:schedule"
+  ],
+  "ignorePresets": [":prConcurrentLimit20"],
+  "labels": ["renovate"],
+  "postUpdateOptions": ["yarnDedupeHighest", "gomodTidy"],
+  "dockerfile": {
+    "fileMatch": ["(^|/)Dockerfile-[^/]*$"]
+  },
+  "npm": {
+    "rangeStrategy": "bump"
+  },
+  "rangeStrategy": "update-lockfile",
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "groupName": "boto3",
+      "matchPackageNames": ["boto3", "botocore"]
+    },
+    {
+      "matchPackageNames": ["husky"],
+      "allowedVersions": "<6"
+    }
+  ]
+}
