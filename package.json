@@ -1,6 +1,6 @@
 {
   "name": "@hadenlabs/renovate-config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "renovate-config for hadenlabs",
   "author": "Luis Mayta <slovacus@gmail.com>",
   "license": "LGPL-3.0",
