@@ -1,4 +1,9 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["local>hadenlabs/renovate-config"]
+  "extends": ["github>hadenlabs/renovate-config"],
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "automerge": true
+    }
+  ]
 }
