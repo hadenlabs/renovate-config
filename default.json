@@ -6,6 +6,8 @@
   },
   "extends": [
     "config:base",
+    ":semanticCommits",
+    ":semanticCommitTypeAll(ci)",
     ":dependencyDashboard",
     ":separateMultipleMajorReleases",
     ":timezone(America/Lima)",
