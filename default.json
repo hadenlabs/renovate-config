@@ -8,6 +8,7 @@
     "config:base",
     ":semanticCommits",
     ":semanticCommitTypeAll(ci)",
+    ":semanticCommitScopeDisabled",
     ":dependencyDashboard",
     ":separateMultipleMajorReleases",
     ":timezone(America/Lima)",
